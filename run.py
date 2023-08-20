@@ -85,6 +85,10 @@ cmd=config.run(AppData)
 if cmd==None:
     print('Error: Received None')
     exit(1)
+
+if cmd.startswith("@root@/"):
+    cmd=cmd.replace("@root@",root,1)
+
 print(f"recieved command: {cmd}")
 if "PWD" in AppData:
     os.chdir(AppData["PWD"])
