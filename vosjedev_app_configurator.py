@@ -106,9 +106,9 @@ def run(appdata: dict):
     while x<=len(args.names)-1: # custom 'for' loop to fix issues when removing parts from loop
         arg=args.names[x]
         if args.types[arg]=='str':
-            args.inputs[arg]=TextArea(height=1,name='> ', focus_on_click=True)
+            args.inputs[arg]=TextArea(height=1,name='> ', focus_on_click=True, multiline=False)
         elif args.types[arg]=='int':
-            args.inputs[arg]=TextArea(height=1,name='> ', focus_on_click=True, validator=validators.int)
+            args.inputs[arg]=TextArea(height=1,name='> ', focus_on_click=True, validator=validators.int, multiline=False)
         elif args.types[arg]=='switch':
             args.inputs[arg]=Checkbox("Enable")
         else:
