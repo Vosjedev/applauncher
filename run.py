@@ -86,7 +86,7 @@ if cmd==None:
     print('Error: Received None')
     exit(1)
 
-if cmd.startswith("@root@/"):
+if "@__root_vosje__@" in cmd:
     cmd=cmd.replace("@root@",root,1)
 
 print(f"recieved command: {cmd}")
