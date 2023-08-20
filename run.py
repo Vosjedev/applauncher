@@ -51,6 +51,10 @@ def ParseAppFile(filename,skipargs=False):
 
 print('generating applist...')
 Applist=list()
+for appfile in os.listdir(path=f"{root}/ClosedAppRegister"):
+    infolist=ParseAppFile(f"{root}/AppRegister/{appfile}",skipargs=True)
+    print(infolist['ID'],',',end='',flush=True)
+    Applist.append((f"{root}/AppRegister/{appfile}",infolist["Name"]))
 for appfile in os.listdir(path=f"{root}/AppRegister"):
     infolist=ParseAppFile(f"{root}/AppRegister/{appfile}",skipargs=True)
     print(infolist['ID'],',',end='',flush=True)
