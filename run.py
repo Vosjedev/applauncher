@@ -87,7 +87,7 @@ if cmd==None:
     exit(1)
 
 if "@__root_vosje__@" in cmd:
-    cmd=cmd.replace("@root@",root,1)
+    cmd=cmd.replace("@__root_vosje__@",root,1)
 
 print(f"recieved command: {cmd}")
 if "PWD" in AppData:
